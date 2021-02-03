@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymTab", "SymTab.csproj", "{05650C4D-AF34-4A70-A767-7BA6F4848410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject4", "UnitTestProject4\UnitTestProject4.csproj", "{0B874D00-076F-4AD5-A446-D3A6C264BE97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05650C4D-AF34-4A70-A767-7BA6F4848410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05650C4D-AF34-4A70-A767-7BA6F4848410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05650C4D-AF34-4A70-A767-7BA6F4848410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05650C4D-AF34-4A70-A767-7BA6F4848410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B874D00-076F-4AD5-A446-D3A6C264BE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B874D00-076F-4AD5-A446-D3A6C264BE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B874D00-076F-4AD5-A446-D3A6C264BE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B874D00-076F-4AD5-A446-D3A6C264BE97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7417D71-E178-4A91-90C9-FC1FCC4C0EB3}
+	EndGlobalSection
+EndGlobal
