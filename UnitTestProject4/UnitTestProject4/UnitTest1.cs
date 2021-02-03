@@ -39,7 +39,7 @@ namespace UnitTestProject4
         //    creditsPerClass.Put(theClass, nCredits);
         //    Assert.AreEqual(nCredits, creditsPerClass.Get(theClass));
         //}
-        // end T003_get()
+        //// end T003_get()
 
 
         //[TestMethod]
@@ -55,7 +55,7 @@ namespace UnitTestProject4
         //// end T004_delete()
 
 
-        // [TestMethod]
+        //[TestMethod]
         //public void T005_contains()
         //{
         //    SimpleST<string, int> creditsPerClass = new SimpleST<string, int>();
@@ -249,16 +249,6 @@ namespace UnitTestProject4
         //}
         //// end T014_deleteMax()
 
-    }
 
-    //[TestClass]
-    //public class BinarySearchSTTest
-    //{
-    //    public void T1_rankTest()
-    //    {
-    //        BinarySearchST<string, int> table = new BinarySearchST<string, int>();
-    //        Assert.AreEqual(0, table.Rank("cs242"));
-    //    }
-    //    // end T1_rankTest()
-    //}
+    }
 }

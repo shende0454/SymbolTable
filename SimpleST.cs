@@ -48,7 +48,7 @@ namespace SymTab
 
         public ValueType Get(KeyType key)
         {
-            /*
+            
             int index = FindIndex(key);
             if (index == _theTable.Count)
             {
@@ -56,8 +56,6 @@ namespace SymTab
             }
                 //Return value associate with key
                 return _theTable[index].Value;
-            */
-            throw new NotImplementedException();
         }
 
         public void Delete(KeyType key)
@@ -68,12 +66,9 @@ namespace SymTab
                 throw new Exception("Get: key not found");
             }
   
-                _theTable.RemoveAt(index);
-               
-            
+                _theTable.RemoveAt(index);   
         }
-
-        public bool Contains(KeyType key)
+       public bool Contains(KeyType key)
         {
             Boolean isContained = true;
             int index = FindIndex(key);
@@ -108,53 +103,75 @@ namespace SymTab
             }
             _theTable.Sort();
             return _theTable[Size()-1].Key;
-
-
         }
 
         public KeyType Floor(KeyType key)
         {
-
-            int index = FindIndex(key);
+            int index = 0;
             if (IsEmpty())
             {
                 throw new Exception("List is empty");
             }
             _theTable.Sort();
-           if(index !=)
-            
-
+            while (index < _theTable.Count && _theTable[index].Key.CompareTo(key) != 0 && _theTable[index].Key.CompareTo(key) != -1)
+            {
+                ++index;
+            }
+            return _theTable[index].Key;
         }
-        //Sort ceiling and floor methods
+        
         public KeyType Ceiling(KeyType key)
         {
-           
             int index = FindIndex(key);
             if (IsEmpty())
             {
                 throw new Exception("List is empty");
             }
                _theTable.Sort();
-            if (index != 0)
-            {
-                return _theTable[index - 1].Key;
-            }
-            else
-            {
-                return _theTable[index].Key;
-             }
-            
-          
+           
+            return (index != 0) ? _theTable[index - 1].Key :_theTable[index].Key; 
         }
-
+        
         public int Rank(KeyType key)
         {
-            throw new NotImplementedException();
+            int cmpVal;
+            int rank = 0;
+            _theTable.Sort();
+            for (int i = 0; i < Size(); i++)
+            {
+                cmpVal = _theTable[i].Key.CompareTo(key);
+                if (cmpVal == - 1)
+                {
+                    rank += 1;
+                }
+            }
+            return rank;
         }
-
+      
         public KeyType SelectWithRankOf(int rank)
         {
-            throw new NotImplementedException();
+            _theTable.Sort();
+            int rankToCmp= 0;
+            int index = 0;
+            Boolean notE = true;
+            while (index < Size() && notE != false)
+            {
+               rankToCmp  = Rank(_theTable[index].Key);
+                
+                if (rankToCmp == rank)
+                {
+                   notE = false;
+                   index -= 1;
+                }
+                
+                ++index;
+             }
+            if (rank >= Size())
+            {
+                throw new Exception("List is empty");
+            }
+            
+            return _theTable[index].Key;
         }
 
         public void DeleteMin()
@@ -180,12 +197,16 @@ namespace SymTab
 
         public IEnumerator<KeyType> GetEnumerator()
         {
-            throw new NotImplementedException();
+            foreach (KeyValuePair<KeyType, ValueType> keys in _theTable)
+            {
+                yield return keys.Key;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+
+            return GetEnumerator();
         }
     }
 }
